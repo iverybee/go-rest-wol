@@ -8,8 +8,8 @@ ADD . /app/
 WORKDIR /app
 
 # Install Dependecies
-RUN apt update && apt upgrade && \
-    apt add --no-cache git && \
+RUN apt update -y && apt upgrade -y && \
+    apt add --no-cache git -y && \
     go get -d github.com/gorilla/handlers && \
     go get -d github.com/gorilla/mux && \
     go get -d github.com/gocarina/gocsv
