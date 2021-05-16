@@ -9,7 +9,7 @@ WORKDIR /app
 
 # Install Dependecies
 RUN apt update -y && apt upgrade -y && \
-    apt add --no-cache git -y && \
+    apt install git -y && \
     go get -d github.com/gorilla/handlers && \
     go get -d github.com/gorilla/mux && \
     go get -d github.com/gocarina/gocsv
